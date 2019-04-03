@@ -49,7 +49,7 @@ def print_h5(h5_filename, section=None, show_attrs=False, show_data=False):
 
     """
 
-    h5_file = h5py.File(args.filename, 'r')
+    h5_file = h5py.File(h5_filename, 'r')
     if section is not None:
         h5_in = h5_file[section]
     else:

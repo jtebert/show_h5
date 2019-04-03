@@ -29,10 +29,10 @@ print_h5(h5_filename, section=None, show_attrs=False, show_data=False)
 
 ### Parameters
 
-**h5_filename**: (str) Name/location of the file to show
+`h5_filename`: (str) Name/location of the file to show
 
-**section**: (str, optional) Group or dataset of the file to show (the default is None, which shows the contents of the whole file)
+`section`: (str, optional) Group or dataset of the file to show (the default is None, which shows the contents of the whole file)
 
-**show_attrs**: (bool, optional) Whether to show dataset attributes (the default is False, which only shows dataset contents)
+`show_attrs`: (bool, optional) Whether to show dataset attributes (the default is False, which only shows dataset contents)
 
-**show_data**: (bool, optional) Whether to show the contents of the dataset. *Warning: this can blow up with large datasets* (the default is False, which only shows the name and size of the dataset)
+`show_data`: (bool, optional) Whether to show the contents of the dataset. *Warning: this can blow up with large datasets* (the default is False, which only shows the name and size of the dataset)

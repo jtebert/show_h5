@@ -14,6 +14,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     install_requires=[
         'h5py',
+        'argparse'
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
