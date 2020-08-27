@@ -2,3 +2,7 @@ build/
 dist/
 **/*.egg-info
 **/*.pyc
+.mypy_cache/
+.vscode/
+*.egg-info/
+venv/

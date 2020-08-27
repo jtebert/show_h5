@@ -5,13 +5,16 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="show_h5",
-    version="0.1",
+    version="0.2",
     author_email="julia@juliaebert.com",
     description="Command-line interface to preview HDF5 files",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jtebert/show_h5",
     packages=setuptools.find_packages(),
+    entry_points={
+        'console_scripts': ['show_h5=show_h5.show_h5:main'],
+    },
     install_requires=[
         'h5py',
         'argparse'
