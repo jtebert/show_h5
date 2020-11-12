@@ -1,7 +1,7 @@
 import sys
 import os
 import argparse
-from typing import Literal, Optional
+from typing import Optional
 
 import h5py
 import numpy as np
@@ -66,7 +66,7 @@ def h5_structure(h5_group, filename, show_attrs, show_data):
 def show_h5(h5_filename: str,
             section: Optional[str] = None,
             show_attrs: bool = False,
-            show_data: Literal["none", "some", "all"] = "none"):
+            show_data: str = "none"):
     """API for printing structure/contents of HDF5 file
 
     Parameters

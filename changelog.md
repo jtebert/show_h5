@@ -5,7 +5,14 @@ This documents changes for each show_h5 release.
 All notable changes to this project will be documented in this file.
 
 The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`_, and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
-## Unreleased
+
+## v0.2.1
+
+### Changed
+
+- Removed requirement of typing Literal, which requires Python 3.8. (So now it should work with Python 3.7)
+
+## v0.2
 
 ### Added
 

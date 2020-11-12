@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="show_h5",
-    version="0.2",
+    version="0.2.1",
     author_email="julia@juliaebert.com",
     description="Command-line interface to preview HDF5 files",
     long_description=long_description,
