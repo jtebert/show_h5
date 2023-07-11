@@ -10,15 +10,14 @@ import numpy as np
 def _is_dataset(h5_data):
     return isinstance(h5_data, h5py.Dataset)
 
+def _print_attributes(dset, str_prefix):
+    for k, v in dset.attrs.items():
+        print(f'{str_prefix} {k}: {v}')
 
 def _print_dataset(h5_dset, prefix, sep, show_attrs, show_data):
     """Print the contents of a dataset
     """
     name = os.path.split(h5_dset.name)[1]
-
-    def _print_attributes(dset, str_prefix):
-        for k, v in dset.attrs.items():
-            print(f'{str_prefix} {k}: {v}')
 
     if show_data or len(h5_dset.shape) == 0:
         first_prefix = f'{prefix}{name}: '
@@ -51,6 +50,8 @@ def h5_structure(h5_group, filename, show_attrs, show_data):
             _print_dataset(h5_data, str_prefix, sep, show_attrs, show_data)
         else:
             # Is group
+            if show_attrs:
+                _print_attributes(h5_data, str_prefix+sep)
             for name, group in h5_data.items():
                 if not _is_dataset(group):
                     print(sep+str_prefix + name)
